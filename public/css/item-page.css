@@ -1,0 +1,103 @@
+/* Top Section of the Product Description */
+
+/* Flex container for the top section of the product description (image and details) */
+.description-top {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 40px; 
+}
+
+/* Styling for the details section within the top part of the description */
+.details {
+    display: flex;
+    flex-direction: column; /* Stacks child elements vertically */
+    justify-content: space-between; 
+    line-height: 13px; /* Sets the line spacing between the elements */
+}
+
+/* Image in the top description section */
+.description-top img {
+    height: 400px; /* Fixed height for the album covers */
+    margin-right: 60px; 
+}
+
+/* Top details (like title and artist) */
+
+/* Main title styling, larger font size for emphasis */
+.top-details h1 {
+    font-size: 48px; 
+    margin-top: 13px; /* Fixes problem with alignment between image and title */
+}
+
+/* Subtitle styling, slightly smaller than the main title */
+.top-details p {
+    font-size: 32px; 
+}
+
+/* Bottom details styling, such as smaller descriptions */
+.bottom-details p {
+    font-size: 16px; 
+}
+
+/* Add to basket button */
+
+/* Styling for the 'Add to Basket' button */
+.add-basket {
+    background-color: #2D5873; 
+    color: white; 
+    border: none; 
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+}
+
+/* Hover effect for the 'Add to Basket' button */
+.add-basket:hover {
+    background-color: #7BA696; 
+}
+
+
+/* Bottom Section of the Product Description */
+
+/* Flex container for the bottom section, stacking its elements vertically */
+.description-bottom {
+    display: flex; 
+    width: 100%; /* Full width to align with the container */
+    flex-direction: column; 
+    align-items: center; 
+}
+
+/* Text styling for album description */
+.album-description {
+    font-size: 16px; 
+    line-height: 24px; /* Sets line height */
+}
+
+/* Container for the bottom section */
+
+.description-bottom-container {
+    width: 745px; /* Fixed width for the container */
+}
+
+/* Tracklist styling */
+
+/* Flexbox layout for the tracklist */
+.tracklist, .harlequin-tracklist {
+    display: flex; 
+    flex-direction: column;
+}
+
+/* Styling for the text within the tracklist */
+.tracklist p {
+    font-size: 16px; 
+    line-height: 0px; 
+    margin-right: 60px;
+}
+
+
+.harlequin-tracklist p {
+    font-size: 16px; 
+    line-height: 24px; 
+    margin-right: 60px;
+}

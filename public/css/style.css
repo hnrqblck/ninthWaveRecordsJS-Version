@@ -1,0 +1,304 @@
+/* General Style */
+
+/* Global font and margin reset */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Paragraph styling with chosen font and line-height */
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* Make all images responsive */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Adds margin to the main content area  */
+.main-section {
+    margin: 60px;
+}
+
+/* General a tag styles */
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+/* Header */
+
+/* Header flexbox layout for logo, search bar, and menu alignment */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    background: #7BA696;
+    z-index: 10;
+}
+
+/* Logo styling within the header */
+.companyLogo {
+    height: 131px;
+    width: 144px;
+    align-self: end;
+    margin-top: 45px;
+    margin-bottom: -1.5px;
+}
+
+/* Style for the search bar in the header */
+.header > input {
+    width: 60%;
+    height: 40px;
+    margin: 0px 30px;
+    padding: 0px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Remove default list styles (bullet points) from unordered lists */
+ul {
+    list-style: none;
+}
+
+/* Flexbox for the header's icons (user and cart) */
+.iconsHeader {
+    display: flex;
+    padding: 0;
+    margin-right: 60px;
+}
+
+/* Set size and spacing for each header icon */
+.iconsHeader > li {
+    height: 20px;
+    width: 20px;
+    padding-right: 20px;
+}
+
+/* Genres */
+
+/* Styling the genre navigation bar */
+.genres {
+    background-color: #2D5873;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+/* Flex layout for genre list items */
+.genres ul {
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling for each genre link */
+.genres a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 5%;
+    cursor: pointer;
+    color: #BFBA9F;
+}
+
+/* Change background color on hover for genre links */
+.genres a:hover {
+    background-color: #1C4B68;
+}
+
+/* Banner */
+
+/* Set height for the banner image container */
+.banner {
+    height: 300px;
+}
+
+/* Ensure banner image covers the entire container and image doesn't stretch*/
+.bannerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* New Releases */
+
+/* Style for the new releases section header */
+.new-releases > h1 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 60px;
+}
+
+/* Flexbox layout for the album list */
+.new-releases ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Each album item is centered and spaced appropriately */
+.new-releases ul li {
+    text-align: center;
+    width: 22%;
+    margin-bottom: 30px;
+}
+
+/* Flex layout for each album container */
+.new-releases a {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    z-index: -100;
+}
+
+/* Container to hold album image and button */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Set size for album images and add transition effect */
+.new-releases img {
+    height: 200px;
+    width: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Initially hide the "Add to Cart" button */
+.new-releases button {
+    display: none;
+    background-color: #2D5873;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 90.2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 200px;
+    height: 40px;
+}
+
+/* Show the button when hovering over the album image */
+.image-container:hover button {
+    display: block;
+}
+
+/* Change button color on hover */
+.new-releases button:hover {
+    background-color: #7BA696;
+}
+
+/* Styling album information (artist, album name, price) */
+.new-releases .album-info {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/* Bold the artist name */
+.new-releases .album-info .artist {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Style for artist name, album name, and price */
+.new-releases .album-info .artist,
+.new-releases .album-info .album-name,
+.new-releases .album-info .price {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+
+/* Footer */
+
+/* Footer container with padding and background color */
+.footer {
+    background-color: #f7f3e8;
+    padding: 40px 0;
+}
+
+/* Flexbox layout for footer content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Footer heading styles */
+.about h2, .contact-form h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Footer paragraph styles */
+.about p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+/* Contact form styling */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Input and textarea styling for the contact form */
+.contact-form input, .contact-form textarea {
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Submit button for the contact form */
+.contact-form button {
+    background-color: #90a68e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Button hover effect */
+.contact-form button:hover {
+    background-color: #7e957e;
+}
+
+/* Footer logo with hover effect for rotation */
+.footer-logo {
+    height: 120px;
+    width: auto;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for the spin */
+}
+
+/* Rotate the footer logo 360 degrees on hover */
+.footer-logo:hover {
+    transform: rotate(360deg);
+}

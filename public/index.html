@@ -1,0 +1,257 @@
+<!-- 
+    
+    COMMENTS ABOUT THE PROJECT:
+    
+    
+    I faced a problem when designing the website, that was how to use images without copyright if I'm selling 
+    records and I need the covers. So, I got the majority of the covers from Pitchfork, but since this site would 
+    be use for commercial purposes, it falls under copyright rights as per Irish law. 
+    Which can be seen here: 
+    https://www.ipoi.gov.ie/en/understanding-ip/help-guidance/ip-information-booklets/copyright-and-related-rights.pdf
+
+    I would also like to ask for the folder to be seen completely, where you can find all the design and wireframes
+    created by me in Figma. From the logo to the website idea. :) 
+
+    Enjoy Ninth Wave Records! 
+
+    p.s. I got a bit carried away with the idea, but I do have a background in front end development, so I decided
+    to have fun with html + css + javascript (it has been a long time since I've done a project without React).
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ninth Wave Records</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/modal.css">
+    </head>
+    <body>
+        <header class="header">
+            <!-- Company logo -->
+            <img class="companyLogo" src="./img/logo-header.png" alt="Ninth Wave logo">
+            <!-- Search input field allowing users to search the site -->
+            <input type="text" placeholder="Search">
+            <!-- section tag is used to clearly separate the site's sections -->
+            <section class="header_menu">
+                <!-- creates an unordered list -->
+                <ul class="iconsHeader">
+                    <!-- User icon linked to user profile or login page (hasn't been implemented)-->
+                    <!-- li reates a list icon -->
+                    <li>
+                        <a href="/login">
+                            <img src="./img/spotify-logo.png" alt="Connect to Spotify"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="./img/user_icon.svg" alt="User Icon"/>
+                        </a>
+                    </li>
+                    <!-- Cart icon linked to cart.html -->
+                    <li>
+                        <a href="./cart.html">
+                            <img src="./img/cart_icon.svg" alt="Cart Icon"/>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </section>
+        </header>
+
+        <!-- Navigation menu -->
+        <section class="genres">
+            <ul class="genresList" id="genres-list">
+                <!-- Genre links for filtered pages for each genre /also sales and new releases -->
+                <a>
+                    <li>Sale</li>
+                </a>
+                <a href="./new-releases.html">
+                    <li>New Releases</li>
+                </a>
+                <a>
+                    <li>Pop</li>
+                </a>
+                <a>
+                    <li>Rap</li>
+                </a>
+                <a>
+                    <li>R&B</li>
+                </a>
+                <a>
+                    <li>Jazz</li>
+                </a>
+            </ul>
+        </section>
+
+        <!-- Section for displaying the promotional banner / usually newest reease-->
+        <section class="banner">
+            <img class="bannerImage" src="./img/lady-gaga-harlequin-album.webp" alt="Newest release banner">
+        </section>
+
+        <!-- Section displaying new album releases -->
+        <section class="new-releases main-section">
+            <h1>NEW RELEASES</h1>
+            <!-- List of album products -->
+            <ul class="products">
+                <li>
+                    <a href="./harlequin.html">
+                        <div class="image-container">
+                            <!-- Album cover image and add-to-basket button -->
+                            <img src="./img/album_covers/Harlequin_Lady_Gaga_cover_art.png" alt="Cover of Harlequin by Lady Gaga">
+                            <button class="add-basket" type="submit">add to basket</button>
+                        </div>
+                        <div class="album-info">
+                            <div>
+                                <!-- Album artist, name, and price details -->
+                                <p class="artist">LADY GAGA</p>
+                                <p class="album-name">Harlequin (Vinyl)</p>
+                                <p class="price">€34.90</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <!-- Same as the one above -->
+                <li>
+                    <a>
+                        <div class="image-container">
+                            <img src="./img/album_covers/imaginal_disk_magdalena_bay_cover.jpg" alt="Cover of Imaginal Disk by Magdalena Bay">
+                            <button class="add-basket" type="submit">add to basket</button>
+                        </div>
+                        <div class="album-info">
+                            <p class="artist">MAGDALENA BAY</p>
+                            <p class="album-name">Imaginal Disk (Vinyl)</p>
+                            <p class="price">€29.00</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="image-container">
+                            <img src="./img/album_covers/tassia_reis_topo_da_minha_cabeca_cover.jpg" alt="Cover of Topo da Minha Cabeça by Tassia Reis">
+                            <button class="add-basket" type="submit">add to basket</button>
+                        </div>
+                        <div class="album-info">
+                            <p class="artist">TASSIA REIS</p>
+                            <p class="album-name">Topo da Minha Cabeça (Vinyl) (Imported)</p>
+                            <p class="price">€45.50</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="image-container">
+                            <img src="./img/album_covers/nilufer_yanya_method_actor_cover.webp" alt="Cover of My Method Actor by Nilüfer Yanya">
+                            <button class="add-basket" type="submit">add to basket</button>
+                        </div>
+                        <div class="album-info">
+                            <p class="artist">NILÜFER YANYA</p>
+                            <p class="album-name">My Method Actor (Vinyl)</p>
+                            <p class="price">€25.90</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="image-container">
+                            <img src="./img/album_covers/cascade_Floating_Points_cover.jpeg" alt="Cover of Cascade by Floating Points">
+                            <button class="add-basket" type="submit">add to basket</button>
+                        </div>
+                        <div class="album-info">
+                            <p class="artist">FLOATING POINTS</p>
+                            <p class="album-name">Cascade (Vinyl)</p>
+                            <p class="price">€34.00</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="image-container">
+                            <img src="./img/album_covers/eusexua_fka_twigs_cover.png" alt="Cover of Eusexua by FKA Twigs">
+                            <button class="add-basket" type="submit">add to basket</button>
+                        </div>
+                        <div class="album-info">
+                            <p class="artist">FKA TWIGS</p>
+                            <p class="album-name">Eusexua (Single) (Vinyl)</p>
+                            <p class="price">€14.90</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="image-container">
+                            <img src="./img/album_covers/Nala-Sinephro-–-Endlessness-2024-700x700.jpeg" alt="Cover of Endlessness by Nala Sinephro">
+                            <button class="add-basket" type="submit">add to basket</button>
+                        </div>
+                        <div class="album-info">
+                            <p class="artist">NALA SINEPHRO</p>
+                            <p class="album-name">Endlessness (Vinyl)</p>
+                            <p class="price">€24.00</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="image-container">
+                            <img src="./img/album_covers/Nick-Cave-The-Bad-Seeds-–-Wild-God-700x700.jpeg" alt="Cover of Wild God by Nick Cave and The Bad Seeds">
+                            <button class="add-basket" type="submit">add to basket</button>
+                        </div>
+                        <div class="album-info">
+                            <p class="artist">NICK CAVE</p>
+                            <p class="album-name">Wild God (Vinyl)</p>
+                            <p class="price">€35.90</p>
+                        </div>
+                    </a> 
+                </li>
+            </ul>
+        </section>
+        <!-- Pop-Up Modal -->
+        <div id="spotifyModal" class="modal">
+            <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>We've Got News!</h2>
+            <p>Now Ninth Wave Records is even more tailored to your taste! Click the button below to connect your Spotify account, and we'll recommend all the vinyls we have based on the music we know you love.</p>
+            <button id="connectSpotifyBtn" class="connect-btn">Connect to Spotify</button>
+            </div>
+        </div>
+  
+
+        <!-- Footer section of the webpage -->
+        <footer class="footer">
+            <div class="footer-content">
+                <!-- About the company -->
+                <div class="about">
+                    <h2>ABOUT NINTH WAVE RECORDS</h2>
+                    <p>
+                        Named after the second side of Kate Bush’s <em>Hounds of Love</em> and inspired by Ivan Aivazovsky’s painting <em>The Ninth Wave</em>, we celebrate the beauty and power of art and music. We believe music, like the sea, can be both a source of solace and adventure, guiding you through the waves of life.
+                    </p>
+                </div>
+                <!-- Company logo version in the footer (spins imitating a vinyl) -->
+                <img class="footer-logo" src="./img/round_logo.png" alt="Ninth Wave Records Logo">
+                
+                <!-- Contact form for users to submit their messages -->
+                <div class="contact-form">
+                    <h2>GET IN TOUCH</h2>
+                    <form id="contactForm">
+                        <!-- Input for user's name -->
+                        <input type="text" id="name" placeholder="Your Name">
+                        <!-- Input for user's email. type=email already ensures user needs to put a valid email to send the form. -->
+                        <input type="email" id="email" placeholder="E-Mail">
+                        <!-- Input for user's phone number -->
+                        <input type="tel" id="phone" placeholder="Mobile">
+                        <!-- Textarea for user's message -->
+                        <textarea id="message" placeholder="Your message"></textarea>
+                        <!-- Submit button for the form -->
+                        <button type="submit">send</button>
+                    </form>
+                    <!-- Placeholder for error messages related to form validation -->
+                    <p id="error-message" style="color: red;"></p>
+                </div>
+            </div>
+        </footer>
+        <script src="./js/script.js"></script>
+        <script src="./js/api.js"></script>
+    </body>
+</html>

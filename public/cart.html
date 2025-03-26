@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cart - Ninth Wave Records</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/cart.css">
+    </head>
+    <body>
+        <header class="header">
+            <!-- Logo linking back to the homepage -->
+            <a href="./index.html">
+                <img class="companyLogo" src="./img/logo-header.png" alt="Ninth Wave Records logo">
+            </a>
+            <input type="text" placeholder="Search">
+            <nav class="grid-12 header_menu">
+                <ul class="iconsHeader">
+                    <li>
+                        <img src="./img/user_icon.svg" alt="User icon">
+                    </li>
+                    <li>
+                        <img src="./img/cart_icon.svg" alt="Cart icon">
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="genres">
+            <ul class="genresList" id="genres-list">
+                <a>
+                    <li>Sale</li>
+                </a>
+                <a href="./new-releases.html">
+                    <li>New Releases</li>
+                </a>
+                <a>
+                    <li>Pop</li>
+                </a>
+                <a>
+                    <li>Rap</li>
+                </a>
+                <a>
+                    <li>R&B</li>
+                </a>
+                <a>
+                    <li>Jazz</li>
+                </a>
+            </ul>
+        </section>
+        
+        <!-- Cart Section -->
+        <div class="head-container">
+            <!-- Cart page heading -->
+            <h1>CART</h1>
+        </div>
+        <section class="cart">
+            <!-- Table displaying items in the cart -->
+            <table class="cart-table">
+                <thead>
+                    <!-- Table headers: Product, Quantity, and Price -->
+                    <tr>
+                        <th>PRODUCT</th>
+                        <th>QUANT.</th>
+                        <th>PRICE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- Product info including image and details -->
+                        <td class="product">
+                            <img src="./img/album_covers/Harlequin_Lady_Gaga_cover_art.png" alt="Cover of Harlequin by Lady Gaga">
+                            <div>
+                                <p>
+                                    <strong>Lady Gaga</strong>
+                                </p>
+                                <p>Harlequin (Vinyl)</p>
+                            </div>
+                        </td>
+                        <!-- Quantity of the item -->
+                        <td>1</td>
+                        <!-- Price of the item -->
+                        <td>€34.90</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Section displaying the total cost and checkout button -->
+            <div class="checkout-section">
+                <p>
+                    <strong>TOTAL:</strong> €34.90
+                </p>
+                <!-- Button leading to the checkout process -->
+                <button class="checkout-button">CHECKOUT</button>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="about">
+                    <h2>ABOUT NINTH WAVE RECORDS</h2>
+                    <p>
+                    Named after the second side of Kate Bush’s <em>Hounds of Love</em> and inspired by Ivan Aivazovsky’s painting <em>The Ninth Wave</em>, we celebrate the beauty and power of art and music. We believe music, like the sea, can be both a source of solace and adventure, guiding you through the waves of life.
+                    </p>
+                </div>
+                <img class="footer-logo" src="./img/round_logo.png" alt="Ninth Wave Records Logo">
+                <div class="contact-form">
+                    <h2>GET IN TOUCH</h2>
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Your Name">
+                        <input type="email" id="email" placeholder="E-Mail">
+                        <input type="tel" id="phone" placeholder="Mobile">
+                        <textarea id="message" placeholder="Your message"></textarea>
+                        <button type="submit">send</button>
+                    </form>
+                    <p id="error-message" style="color: red;"></p>
+                </div>
+            </div>
+        </footer>
+        <script src="./js/script.js"></script>
+        <script src="./js/api.js"></script>
+    </body>
+</html>

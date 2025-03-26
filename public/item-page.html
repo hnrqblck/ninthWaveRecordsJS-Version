@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ninth Wave Records</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/item-page.css">
+    </head>
+    <body>
+        <header class="header">
+            <!-- Company logo linked to home page -->
+            <a href="./index.html">
+                <img class="companyLogo" src="./img/logo-header.png" alt="logo">
+            </a>
+            <input type="text" placeholder="Search">
+            <nav class="grid-12 header_menu">
+                <ul class="iconsHeader">
+                    <li>
+                        <img src="./img/user_icon.svg" alt="User SVG"/>
+                    </li>
+                    <li>
+                        <a href="./cart.html">
+                            <img src="./img/cart_icon.svg" alt="Cart SVG"/>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="genres">
+            <ul class="genresList" id="genres-list">
+                <a>
+                    <li>Sale</li>
+                </a>
+                <a href="./new-releases.html">
+                    <li>New Releases</li>
+                </a>
+                <a>
+                    <li>Pop</li>
+                </a>
+                <a>
+                    <li>Rap</li>
+                </a>
+                <a>
+                    <li>R&B</li>
+                </a>
+                <a>
+                    <li>Jazz</li>
+                </a>
+            </ul>
+        </section>
+
+        <section class="main-section">
+            <div class="description-top">
+              <!-- Album cover image -->
+              <img src="" alt="">
+              <div class="details">
+                <!-- Album artist, title, and price -->
+                <div class="top-details">
+                  <h1></h1>
+                  <p></p>
+                  <p></p>
+                </div>
+                <!-- Additional album details -->
+                <div class="bottom-details">
+                  <p>BARCODE: 010101010101</p>
+                  <p>GENRE: Pop</p>
+                  <p>FORMAT: Vinyl</p>
+                  <button class="add-basket" onclick="location.href='./cart.html';" type="submit">add to basket</button>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Album description and tracklist -->
+            <div class="description-bottom">
+              <div class="description-bottom-container">
+                <!-- Album description -->
+                <p class="album-description"></p>
+                <!-- Album tracklist -->
+                <h1>TRACKLIST</h1>
+                <div class="tracklist"></div>
+              </div>
+            </div>
+          </section>
+          
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="about">
+                    <h2>ABOUT NINTH WAVE RECORDS</h2>
+                    <p>
+                        Named after the second side of Kate Bush’s <em>Hounds of Love</em> and inspired by Ivan Aivazovsky’s painting <em>The Ninth Wave</em>, we celebrate the beauty and power of art and music. We believe music, like the sea, can be both a source of solace and adventure, guiding you through the waves of life.
+                    </p>
+                </div>
+                <img class="footer-logo" src="./img/round_logo.png" alt="Ninth Wave Records Logo">
+                <div class="contact-form">
+                    <h2>GET IN TOUCH</h2>
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Your Name">
+                        <input type="email" id="email" placeholder="E-Mail">
+                        <input type="tel" id="phone" placeholder="Mobile">
+                        <textarea id="message" placeholder="Your message"></textarea>
+                        <button type="submit">send</button>
+                    </form>
+                    <p id="error-message" style="color: red;"></p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./js/script.js"></script>
+        <script src="./js/api.js"></script>
+    </body>
+</html>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Retrieve album data from localStorage
+        const albumData = JSON.parse(localStorage.getItem('selectedAlbum'));
+    
+        if (albumData) {
+        // Populate the album cover
+        document.querySelector('.main-section img').src = albumData.cover;
+        document.querySelector('.main-section img').alt = `Cover of ${albumData.name} by ${albumData.artist}`;
+    
+        // Populate the album details
+        document.querySelector('.details .top-details h1').textContent = albumData.artist;
+        document.querySelector('.details .top-details p:nth-child(2)').textContent = albumData.name;
+        document.querySelector('.details .top-details p:nth-child(3)').textContent = albumData.price;
+    
+        // Populate additional details (if available)
+        document.querySelector('.description-bottom .album-description').textContent = albumData.description;
+    
+        // Populate the tracklist (if available)
+        const tracklistContainer = document.querySelector('.description-bottom .tracklist');
+        tracklistContainer.innerHTML = albumData.tracklist
+            .map((track, index) => `<p>${index + 1}. ${track}</p>`)
+            .join('');
+        } else {
+        console.error("Sorry, but we can not display the album's details.");
+        }
+    });
+</script>
+    

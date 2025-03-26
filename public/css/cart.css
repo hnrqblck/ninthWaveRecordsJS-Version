@@ -1,0 +1,100 @@
+/* Header Container */
+
+/* Styling for the header container */
+.head-container {
+    width: 100%; /* Full width to stretch across the viewport */
+    background-color: #2D5873; 
+    height: 60px; 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 40px; 
+}
+
+/* Cart Section Styling */
+
+/* Main styling for the cart section */
+.cart {
+    padding: 20px; /* Adds padding around the cart content */
+    background-color: #f9f9f9; /* Light background color for contrast */
+}
+
+/* Cart section heading */
+.cart h1 {
+    font-size: 24px; 
+    margin-bottom: 20px; 
+}
+
+/* Styling for the h1 element inside the header container */
+.head-container h1 {
+    color: #BFBA9F; /* Combining with the genre menu */
+    margin: 0 60px; /* Adds space on the sides */
+    font-weight: 100; 
+}
+
+/* Cart Table Styling */
+
+/* Full-width table for the cart items */
+.cart-table {
+    width: 100%; 
+    border-collapse: collapse; /* Ensures table's borders collapse into a single border */
+    margin-bottom: 20px; 
+}
+
+/* Table cell padding, text alignment, and border styling */
+.cart-table th, .cart-table td {
+    padding: 10px; 
+    text-align: left; 
+    border-bottom: 1px solid #ddd; /* Adds light border for separation */
+}
+
+/* Table header styling */
+.cart-table th {
+    font-weight: bold;
+    background-color: #f1f1f1; 
+}
+
+/* Styling for the product images within the cart table */
+.cart-table img {
+    width: 80px;
+    margin-right: 15px; 
+    vertical-align: middle; /* Aligns the image with the middle of the div */
+}
+
+/* Ensures product information is aligned beside the image */
+.cart-table td div {
+    display: inline-block; /* Inline block ensures the text stays inline with the image */
+    vertical-align: middle; 
+}
+
+/* Flexbox layout for the product column to align the image and text horizontally */
+.product {
+    display: flex;
+}
+
+/* Checkout Section Styling */
+
+/* Flexbox layout for the checkout section */
+.checkout-section {
+    display: flex; 
+    justify-content: space-between; /* Spreads content across the available space */
+    align-items: center; 
+    font-size: 18px;
+}
+
+/* Checkout Button Styling */
+
+/* Styling for the checkout button */
+.checkout-button {
+    background-color: #4c8b72; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none;
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s; /* Smooth transition effect when hovering */
+}
+
+/* Hover effect for the checkout button */
+.checkout-button:hover {
+    background-color: #3b7057;
+}

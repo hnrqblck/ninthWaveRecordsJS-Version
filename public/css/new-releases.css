@@ -1,0 +1,26 @@
+/* Header Container */
+
+/* Full-width header with background color, fixed height, and vertical centering of its content */
+.head-container {
+    width: 100%; 
+    background-color: #2D5873; 
+    height: 60px; 
+    display: flex; /* Flexbox layout to align child elements */
+    align-items: center; 
+}
+
+/* Header Title */
+
+/* Styling for the heading inside the header */
+.head-container h1 {
+    color: #BFBA9F; 
+    margin: 0 60px; 
+    font-weight: 100; 
+}
+
+/* Pressed State */
+
+/* Styling for elements when pressed or active (for buttons or nav items) */
+.pressed {
+    background-color: #1C4B68; 
+}
